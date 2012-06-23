@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Bookmarklet Boilerplate</title>
+        <style type="text/css">
+            body {
+                text-align: center;
+            }
+
+            #bookmarklet {
+                font-family: "Helvetica Neue", sans-serif;
+                font-weight: bold;
+                font-size: 72px;
+                text-decoration: none;
+
+                background: black;
+                color: yellow;
+
+                display: block;
+                margin: 20px;
+                padding: 20px;
+                border-radius: 20px;
+            }
+        </style>
+        <script type="text/javascript" src="js/vendor/reqwest.min.js"></script>
+    </head>
+    <body>
+        <p>Drag this link to your bookmarks bar:</p>
+
+        <a id="bookmarklet">My Awesome Bookmarklet</a>
+
+        <script type="text/javascript" defer>
+            var link = document.getElementById("bookmarklet");
+            reqwest({
+                url: "js/bookmarklet.min.js",
+                type: "text",
+                success: function(res) {
+                    link.setAttribute("href", ["javascript", res.responseText].join(":"));
+                }
+            });
+        </script>
+    </body>
+</html>

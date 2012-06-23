@@ -1,0 +1,43 @@
+#my-bookmarklet {
+    position: fixed;
+    top: 50px;
+    right: 50px;
+
+    width: 300px;
+    height: auto;
+
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid;
+}
+
+#my-bookmarklet * {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    margin: 0;
+}
+
+#my-bookmarklet .title {
+    margin: 0 0 10px 0;
+}
+
+#my-bookmarklet a.close {
+    font-weight: bold;
+    text-decoration: none;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    display: block;
+    padding: 0 6px 5px;
+    line-height: 100%;
+
+    background: black;
+    color: white;
+}
+
+table.my-bookmarklet {
+    border: 2px solid red;
+}
